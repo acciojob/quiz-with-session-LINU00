@@ -1,8 +1,8 @@
 const questions = [
   {
-    question: "What is the capital of France?",
-    choices: ["Berlin", "Madrid", "Paris", "Rome"],
-    answer: "Paris"
+    question: "What is the highest mountain in the world?",
+    choices: ["Mount Kilimanjaro", "Mount Everest", "K2", "Mount Fuji"],
+    answer: "Mount Everest"
   },
   {
     question: "Which planet is known as the Red Planet?",
@@ -10,9 +10,9 @@ const questions = [
     answer: "Mars"
   },
   {
-    question: "Who wrote 'Hamlet'?",
-    choices: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Leo Tolstoy"],
-    answer: "William Shakespeare"
+    question: "Who invented the telephone?",
+    choices: ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "James Watt"],
+    answer: "Alexander Graham Bell"
   },
   {
     question: "What is the largest ocean on Earth?",
@@ -42,6 +42,8 @@ function renderQuestions() {
   for (let i = 0; i < questions.length; i++) {
     const question = questions[i];
     const questionElement = document.createElement("div");
+    questionElement.classList.add("question-box");
+
     const questionText = document.createElement("p");
     questionText.textContent = question.question;
     questionElement.appendChild(questionText);
@@ -55,6 +57,7 @@ function renderQuestions() {
 
       if (userAnswers[i] === choice) {
         choiceElement.checked = true;
+        choiceElement.setAttribute("checked", "true");
       }
 
       choiceElement.addEventListener("change", function () {
