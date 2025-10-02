@@ -1,3 +1,31 @@
+const questions = [
+  {
+    question: "What is the capital of France?",
+    choices: ["Berlin", "Madrid", "Paris", "Rome"],
+    answer: "Paris"
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    choices: ["Earth", "Mars", "Jupiter", "Venus"],
+    answer: "Mars"
+  },
+  {
+    question: "Who wrote 'Hamlet'?",
+    choices: ["Charles Dickens", "William Shakespeare", "Mark Twain", "Leo Tolstoy"],
+    answer: "William Shakespeare"
+  },
+  {
+    question: "What is the largest ocean on Earth?",
+    choices: ["Atlantic", "Indian", "Pacific", "Arctic"],
+    answer: "Pacific"
+  },
+  {
+    question: "Which gas do plants absorb from the atmosphere?",
+    choices: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"],
+    answer: "Carbon Dioxide"
+  }
+];
+
 const questionsElement = document.getElementById("questions");
 const scoreElement = document.getElementById("score");
 const submitBtn = document.getElementById("submit");
